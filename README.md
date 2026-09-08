@@ -12,9 +12,10 @@ $F(x,y,z) = 0$
 
 Okay, it's obvious for a sphere but what about more complex shapes? Like "spot", "armadillo" or the "happy buddha". Can we represent them implicitly? How?
 
-Given a target shape, shoot a lot of rays through it.
-Pick many uniformly distributed random points along each ray.
-For each point, measure the distance from the point to the surface of the shape.
+- Given a target shape, shoot a lot of rays through it.
+- Pick many uniformly distributed random points along each ray.
+- For each point, measure the distance from the point to the surface of the shape.
+
 This distance becomes the value assigned to the point in the function we are constructing: positive outside the shape, negative inside (zero on the surface).
 
 As the number of rays and sampled points tends to infinity, the zeros of our function converge to a representation of the surface. The function we have built is called a Signed Distance Function (SDF).
